@@ -3,11 +3,15 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 
-const TopBar = () => (
+interface Props {
+    title: string;
+}
+
+const TopBar = (props: Props) => (
     <AppBar>
         <Toolbar>
             <Typography variant="title" color="inherit">
-                Kartoffel Cook
+                {props.title}
           </Typography>
         </Toolbar>
     </AppBar>

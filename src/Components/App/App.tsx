@@ -5,7 +5,7 @@ import TopBar from '../TopBar';
 class App extends React.Component {
   render() {
     return (
-      <TopBar/>
+      <TopBar title="Kartoffel Cook"/>
     );
   }
 }
