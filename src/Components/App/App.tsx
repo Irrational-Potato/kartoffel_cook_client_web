@@ -5,7 +5,7 @@ import TopBar from '../TopBar';
 class App extends React.Component {
   render() {
     return (
-      <TopBar title="Kartoffel Cook"/>
+      <TopBar title={process.env.REACT_APP_NAME as string}/>
     );
   }
 }

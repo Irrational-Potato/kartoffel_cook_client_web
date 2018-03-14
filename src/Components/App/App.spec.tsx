@@ -12,7 +12,7 @@ describe('App component', () => {
 
   it('App should have top bar', () => {
     const app = shallow(<App/>);
-    expect(app.containsAllMatchingElements([ <Topbar key="test" title="Kartoffel Cook"/> ]))
+    expect(app.containsAllMatchingElements([ <Topbar key="test" title={process.env.REACT_APP_NAME as string}/> ]))
       .toEqual(true);
   });
 });
