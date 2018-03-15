@@ -1,14 +1,16 @@
 import * as React from 'react';
-import Card, { CardMedia, CardContent } from 'material-ui/Card';
+import Card, { CardContent } from 'material-ui/Card';
 
 const RecipeListItem = () => (
     <Card>
-        <CardMedia
-            className="recipe-image"
-            image="https://cocina-casera.com/wp-content/uploads/2015/11/paella-mixta-receta-casera.jpeg"
-        />
         <CardContent>
-            Hola
+            <img
+                className="recipe-image"
+                src="https://cocina-casera.com/wp-content/uploads/2015/11/paella-mixta-receta-casera.jpeg"
+            />
+            <p>
+                Hola
+            </p>
         </CardContent>
     </Card>
 );
