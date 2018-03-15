@@ -1,11 +1,17 @@
 import * as React from 'react';
 import './App.css';
 import TopBar from '../TopBar';
+import { RecipeListItem } from '../RecipeList';
 
 class App extends React.Component {
   render() {
     return (
-      <TopBar title={process.env.REACT_APP_NAME as string}/>
+      <div>
+        <TopBar title={process.env.REACT_APP_NAME as string} />
+        <div className="recipeTest">
+          <RecipeListItem  />        
+        </div>
+      </div>
     );
   }
 }

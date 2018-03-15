@@ -1,17 +1,15 @@
 import * as React from 'react';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
+import { AppBar, Toolbar, Typography } from 'material-ui';
 
 interface Props {
     title: string;
 }
 
 const TopBar = (props: Props) => (
-    <AppBar>
+    <AppBar position="static">
         <Toolbar>
-            <Typography variant="title" color="inherit">
-                {props.title}
+          <Typography variant="title" color="inherit">
+            {props.title}
           </Typography>
         </Toolbar>
     </AppBar>
