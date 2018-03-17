@@ -1,6 +1,7 @@
 import * as React from 'react';
 import TopBar from '../TopBar';
 import { RecipeListItem } from '../RecipeList';
+
 const styles = require('./App.scss');
 
 class App extends React.Component {
@@ -12,7 +13,7 @@ class App extends React.Component {
           <RecipeListItem  />        
         </div>
       </div>
-    );
+    ); 
   }
 }
 
