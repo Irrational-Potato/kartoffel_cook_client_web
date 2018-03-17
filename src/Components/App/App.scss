@@ -1,0 +1,7 @@
+.test {
+    background: darken($color: red, $amount: 20);
+
+    .test2 {
+        background: yellow;
+    }
+}
