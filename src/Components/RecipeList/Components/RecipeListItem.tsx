@@ -1,27 +1,28 @@
 import * as React from 'react';
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
+import { Recipe } from '../viewModel';
 
 const styles = require('./RecipeListItem.scss');
 
-const RecipeListItem = () => (
-    <Card>
+interface Props {
+    recipe: Recipe;
+}
+
+const RecipeListItem = ({ recipe }: Props) => (
+    <Card id={`recipe-${recipe.id}`}>
         <CardMedia
             className={styles.img}
-            // tslint:disable:max-line-length
-            image="https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg"
+            image={recipe.image}
         />
         <CardContent>
 
             <Typography gutterBottom={true} variant="headline" component="h2">
-                Receta de ejemplo
+                {recipe.name}
             </Typography>
 
             <Typography component="p">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Repellat at blanditiis, ab voluptatibus distinctio molestias,
-                et quidem voluptatem unde adipisci, temporibus porro odio officia recusandae nam repellendus
-                quibusdam fuga sit?
+                {recipe.description}
           </Typography>
 
         </CardContent>
