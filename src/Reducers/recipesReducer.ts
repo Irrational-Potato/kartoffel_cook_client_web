@@ -1,4 +1,4 @@
-import { Recipe } from '../Interfaces';
+import { Recipe } from '../interfaces';
 
 interface RecipeState {
     recipes: Recipe[];

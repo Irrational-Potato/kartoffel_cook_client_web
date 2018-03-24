@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import reducer from './Reducers';
+import reducer from './reducers';
 
 /* tslint:disable */
 const composeEnhancers =

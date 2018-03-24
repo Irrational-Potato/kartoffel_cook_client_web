@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Recipe } from '../../Interfaces';
+import { Recipe } from '../../interfaces';
 import RecipeList from './RecipeList';
 
 interface State {

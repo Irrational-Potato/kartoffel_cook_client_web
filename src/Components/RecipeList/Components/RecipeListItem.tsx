@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
-import { Recipe } from '../../../Interfaces';
+import { Recipe } from '../../../interfaces';
 
 const styles = require('./RecipeListItem.scss');
 

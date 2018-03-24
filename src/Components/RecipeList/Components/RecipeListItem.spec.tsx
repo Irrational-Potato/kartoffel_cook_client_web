@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import RecipeListItem from './RecipeListItem';
-import { Recipe } from '../../../Interfaces';
+import { Recipe } from '../../../interfaces';
 
 describe('Recipe List Item', () => {
 
