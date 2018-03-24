@@ -5,14 +5,13 @@ import App from './App';
 import Topbar from '../TopBar';
 
 describe('App component', () => {
-  it('renders without crashing', () => {
+  it('Renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);
   });
 
   it('App should have top bar', () => {
     const app = shallow(<App/>);
-    expect(app.containsAllMatchingElements([ <Topbar key="test" title={process.env.REACT_APP_NAME as string}/> ]))
-      .toEqual(true);
+    expect(app.find(Topbar).length).toBeGreaterThan(0);
   });
 });
