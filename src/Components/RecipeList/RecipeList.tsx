@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Recipe } from './viewModel';
+import { Recipe } from '../../Interfaces';
 import { RecipeListItem } from './index';
 
 const styles = require('./RecipeList.scss');

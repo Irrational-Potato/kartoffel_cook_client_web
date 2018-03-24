@@ -1,15 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
 
 import RecipeListItem from './RecipeListItem';
-import { Recipe } from '../viewModel';
+import { Recipe } from '../../../Interfaces';
 
 describe('Recipe List Item', () => {
 
   const recipe: Recipe = {
     id: 'id1',
-    name: 'name',
+    name: 'name', 
     image: 'image',
     description: 'recipe description'
   };
