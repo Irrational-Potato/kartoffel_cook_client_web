@@ -17,8 +17,9 @@ class RecipeList extends React.Component<Props, {}> {
         );
     }
 
-    renderRecipeListItem = (item: Recipe) => (
+    renderRecipeListItem = (item: Recipe, key: number) => (
         <div 
+            key={key}
             className={styles.recipeListContainer_item}
         >
             <RecipeListItem recipe={item} />
