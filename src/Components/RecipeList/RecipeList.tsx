@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Recipe } from './viewModel';
 import { RecipeListItem } from './index';
-import Grid from 'material-ui/Grid';
+
+const styles = require('./RecipeList.scss');
 
 interface Props {
     recipeList: Recipe[];
@@ -10,16 +11,18 @@ interface Props {
 class RecipeList extends React.Component<Props, {}> {
     render () {
         return (
-            <Grid container={true} spacing={40}>
+            <div className={styles.recipeListContainer}>
                 {this.props.recipeList.map(this.renderRecipeListItem)}
-            </Grid>
+            </div>
         );
     }
 
     renderRecipeListItem = (item: Recipe) => (
-        <Grid item={true} xs={4}>
-            <RecipeListItem recipe={item}/>
-        </Grid>
+        <div 
+            className={styles.recipeListContainer_item}
+        >
+            <RecipeListItem recipe={item} />
+        </div>
     )
 }
 

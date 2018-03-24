@@ -1,0 +1,13 @@
+.recipeListContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &_item{
+        flex: 1;
+        flex-grow: 0;    
+        flex-basis: 350px;
+        margin: 10px;
+    }
+
+}
