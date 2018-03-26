@@ -9,6 +9,6 @@ const defaultState: RecipeState = {
     recipes: []
 };
 
-export const  recipesReducer = (state: RecipeState = defaultState, action: Action) => {
+export const  recipesReducer = (state: RecipeState = defaultState, action: Action): RecipeState => {
     return state;
 };
