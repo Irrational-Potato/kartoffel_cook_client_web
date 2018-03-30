@@ -2,8 +2,7 @@ import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
 import { Recipe } from '../../interfaces';
 import RecipeList from './RecipeList';
-import { ReducersType } from '../../reducers';
-import { RecipesActions } from '../../reducers/recipesReducer';
+import { ReducersType, RecipesActions } from '../../reducers';
 import fetchRecipesAction from '../../actions/recipes/fetchRecipesAction';
 
 interface Props {
