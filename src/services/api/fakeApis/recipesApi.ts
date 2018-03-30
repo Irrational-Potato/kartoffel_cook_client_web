@@ -1,5 +1,5 @@
-import { Recipe } from '../../interfaces';
-import recipesMockData from './mocks/recipesMock';
+import { Recipe } from '../../../interfaces';
+import recipesMockData from '../mocks/recipesMock';
 
 class RecipesApi {
 
