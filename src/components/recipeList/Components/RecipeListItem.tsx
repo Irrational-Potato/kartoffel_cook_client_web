@@ -1,7 +1,9 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import { Recipe } from '../../../interfaces';
+import { recipeDetailURLBase } from '../../../constants/urls';
 
 const styles = require('./RecipeListItem.scss');
 
@@ -10,23 +12,30 @@ interface Props {
 }
 
 const RecipeListItem = ({ recipe }: Props) => (
-    <Card id={`recipe-${recipe.id}`}>
-        <CardMedia
-            className={styles.img}
-            image={recipe.image}
-        />
-        <CardContent>
+    <Link
+        to={`${recipeDetailURLBase}${recipe.id}`}
+        className={styles['recipe-container']}
+    >
+        <Card
+            id={`recipe-${recipe.id}`}
+        >
+            <CardMedia
+                className={styles.img}
+                image={recipe.image}
+            />
+            <CardContent>
 
-            <Typography gutterBottom={true} variant="headline" component="h2">
-                {recipe.name}
-            </Typography>
+                <Typography gutterBottom={true} variant="headline" component="h2">
+                    {recipe.name}
+                </Typography>
 
-            <Typography component="p">
-                {recipe.description}
-          </Typography>
+                <Typography component="p">
+                    {recipe.description}
+                </Typography>
+            </CardContent>
+        </Card>
+    </Link>
 
-        </CardContent>
-    </Card>
 );
 
 export default RecipeListItem;
