@@ -1,3 +1,3 @@
-import RecipeDetail from './RecipeDetail';
+import RecipeDetailContainer from './RecipeDetailContainer';
 
-export default RecipeDetail;
+export default RecipeDetailContainer;

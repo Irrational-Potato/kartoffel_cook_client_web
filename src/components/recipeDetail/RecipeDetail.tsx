@@ -1,9 +1,16 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
+import { RecipeDetail as RecipeDetailInterface } from '../../interfaces';
 
-const RecipeDetail = ({ match }: RouteComponentProps<any>) => {
-    console.log(match);
-    return <span>Recipe Detail {match.params.recipeId}</span>;
+interface Props {
+    recipeDetail: RecipeDetailInterface;
+}
+
+const RecipeDetail = (props: Props) => {
+    if (props.recipeDetail) {
+        return <span>Recipe Detail {props.recipeDetail.id}</span>;
+    }
+
+    return <span>No hay receta</span>;
 };
 
 export default RecipeDetail;

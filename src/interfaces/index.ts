@@ -1,3 +1,7 @@
 import Recipe from './Recipe';
+import RecipeDetail from './RecipeDetail';
 
-export { Recipe };
+export { 
+    Recipe,
+    RecipeDetail
+};
