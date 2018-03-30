@@ -1,73 +1,40 @@
 import * as React from 'react';
+import { connect, Dispatch } from 'react-redux';
 import { Recipe } from '../../interfaces';
 import RecipeList from './RecipeList';
+import { ReducersType } from '../../reducers';
+import { RecipesActions } from '../../reducers/recipesReducer';
+import fetchRecipesAction from '../../actions/recipes/fetchRecipesAction';
 
-interface State {
+interface Props {
     recipesList: Recipe[];
+    fetchRecipes: () => void;
 }
 
-class RecipeListContainer extends React.Component<{}, State> {
-    constructor(props: {}) {
+class RecipeListContainer extends React.Component<Props, {}> {
+    constructor(props: Props) {
         super(props);
+    }
 
-        this.state = {
-            recipesList: [
-                {
-                    id: 'testid',
-                    name: 'Name',
-                    description: 'Description',            
-                    // tslint:disable:max-line-length
-                    image: 'https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg'
-                },
-                {
-                    id: 'testid',
-                    name: 'Name',
-                    description: 'Description',            
-                    // tslint:disable:max-line-length
-                    image: 'https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg'
-                },
-                {
-                    id: 'testid',
-                    name: 'Name',
-                    description: 'Description',            
-                    // tslint:disable:max-line-length
-                    image: 'https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg'
-                },
-                {
-                    id: 'testid',
-                    name: 'Name',
-                    description: 'Description',            
-                    // tslint:disable:max-line-length
-                    image: 'https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg'
-                },
-                {
-                    id: 'testid',
-                    name: 'Name',
-                    description: 'Description',            
-                    // tslint:disable:max-line-length
-                    image: 'https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg'
-                },
-                {
-                    id: 'testid',
-                    name: 'Name',
-                    description: 'Description',            
-                    // tslint:disable:max-line-length
-                    image: 'https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg'
-                },
-                {
-                    id: 'testid',
-                    name: 'Name',
-                    description: 'Description',            
-                    // tslint:disable:max-line-length
-                    image: 'https://media.cntraveler.com/photos/59ca6488e11975084c5841ea/master/pass/Federal_160415_FEDERALdonuts64786.jpg'
-                }
-            ]
-        };
+    componentDidMount() {
+        this.props.fetchRecipes();
     }
 
     render() {
-        return <RecipeList recipeList={this.state.recipesList} />;
+        return <RecipeList recipeList={this.props.recipesList} />;
     }
 }
 
-export default RecipeListContainer;
+const mapStateToProps = ( {recipesReducer}: ReducersType) => {
+    return {
+        recipesList: recipesReducer.recipes
+    };
+};
+
+const mapDispatchToProps = (dispatch: Dispatch<RecipesActions>) => {
+    return {
+        fetchRecipes: () => dispatch(fetchRecipesAction())
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeListContainer);

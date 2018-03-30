@@ -1,14 +1,22 @@
 import { Recipe } from '../interfaces';
-import { Action } from 'redux';
+import { LoadRecipeAction } from '../actions/recipes/loadRecipesAction';
+import { LOAD_RECIPES } from '../constants';
 
-interface RecipeState {
+export interface RecipeReducer {
     recipes: Recipe[];
 }
 
-const defaultState: RecipeState = {
+export type RecipesActions = LoadRecipeAction;
+
+const defaultState: RecipeReducer = {
     recipes: []
 };
 
-export const  recipesReducer = (state: RecipeState = defaultState, action: Action): RecipeState => {
-    return state;
+export const recipesReducer = (state: RecipeReducer = defaultState, action: RecipesActions): RecipeReducer => {
+    switch (action.type) {
+        case LOAD_RECIPES:
+            return { ...state, recipes: action.payload };
+        default:
+            return state;
+    }
 };

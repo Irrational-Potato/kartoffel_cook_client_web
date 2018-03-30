@@ -1,5 +1,9 @@
 import { combineReducers } from 'redux';
-import { recipesReducer } from './recipesReducer';
+import { recipesReducer, RecipeReducer } from './recipesReducer';
+
+export interface ReducersType {
+    recipesReducer: RecipeReducer;
+}
 
 const reducers =  combineReducers({
     recipesReducer
