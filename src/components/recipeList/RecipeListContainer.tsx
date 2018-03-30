@@ -3,7 +3,7 @@ import { connect, Dispatch } from 'react-redux';
 import { Recipe } from '../../interfaces';
 import RecipeList from './RecipeList';
 import { ReducersType, RecipesActions } from '../../reducers';
-import fetchRecipesAction from '../../actions/recipes/fetchRecipesAction';
+import { fetchRecipesAction } from '../../actions';
 
 interface Props {
     recipesList: Recipe[];
@@ -24,7 +24,7 @@ class RecipeListContainer extends React.Component<Props, {}> {
     }
 }
 
-const mapStateToProps = ( {recipesReducer}: ReducersType) => {
+const mapStateToProps = ({ recipesReducer }: ReducersType) => {
     return {
         recipesList: recipesReducer.recipes
     };
