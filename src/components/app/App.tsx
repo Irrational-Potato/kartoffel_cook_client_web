@@ -1,6 +1,6 @@
 import * as React from 'react';
-import TopBar from '../TopBar';
-import RecipeList from '../RecipeList';
+import TopBar from '../topBar';
+import RecipeList from '../recipeList';
 
 const style = require('./App.scss');
 

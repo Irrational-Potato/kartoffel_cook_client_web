@@ -1,7 +1,6 @@
 import { Recipe } from '../../interfaces';
 import recipesMockData from './mocks/recipesMock';
 
-
 class RecipesApi {
 
   loadRecipes(): Promise<Recipe[]> {
