@@ -1,0 +1,14 @@
+.recipeDetailContainer{
+    display: flex;
+
+    .recipeIngredientsContainer{
+        flex: 2;
+        height: 200px;
+        background-color: beige;
+    }
+
+    .recipeDetailDataContainer{
+        flex: 8;
+        height: 200px;
+    }
+}
