@@ -1,19 +1,30 @@
 .recipeDataContainer{
+    background-color: #ebecec;
+    border-left: 1px solid #CCC;
+    min-height: calc(100vh - 4em);
 
     .recipeName{
-        margin: 1.5em;
-    }
-
-    .recipeImage2{
-        height: 500px;
-        width: auto;
+        padding: 1.5em;
+        margin: 0;
     }
 
     .recipeImage{
-        height: 500px;
+        height: 400px;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    .recipeStepContainer{
+        padding: 1em;
+
+        &_item {
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.3);
+            margin-bottom: 1.5em;
+        }
     }
 }

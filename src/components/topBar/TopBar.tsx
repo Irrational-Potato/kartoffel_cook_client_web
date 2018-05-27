@@ -9,7 +9,7 @@ interface Props {
 }
 
 const TopBar = (props: Props) => (
-    <AppBar position="static">
+    <AppBar position="fixed">
         <Toolbar>
           <Typography variant="title" color="inherit">
             <Link to="" className={style.logo}> {props.title} </Link>

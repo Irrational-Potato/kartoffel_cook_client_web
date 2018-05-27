@@ -1,3 +1,7 @@
 import RecipeData from './recipeData/RecipeData';
+import RecipeIngredientsList from './recipeIngredientsList/RecipeIngredientsList';
 
-export { RecipeData };
+export { 
+    RecipeData,
+    RecipeIngredientsList
+};

@@ -3,8 +3,11 @@
 
     .recipeIngredientsContainer{
         flex: 2;
-        height: 200px;
-        background-color: beige;
+        min-width: 300px;
+
+        .recipeIngredientListWrapper{
+            position: fixed;
+        }
     }
 
     .recipeDetailDataContainer{
